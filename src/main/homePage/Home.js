@@ -30,6 +30,19 @@ document.addEventListener('keydown', function(event) {
         character.style.top = (characterTop + 50) + 'px';
     }
 
+    // Check for enter key press and make popup if the character overlaps with options
+    if (event.key === 'Enter') {
+        const characterRect = character.getBoundingClientRect();
+        const option1Rect = option1.getBoundingClientRect();
+        const option2Rect = option2.getBoundingClientRect();
+
+        if (isOverlap(characterRect, option1Rect)) {
+            alert('You selected option 1');
+        } else if (isOverlap(characterRect, option2Rect)) {
+            alert('You selected option 2');
+        }
+    }
+
     // Check if the character overlaps with options
     const characterRect = character.getBoundingClientRect();
     const option1Rect = option1.getBoundingClientRect();
