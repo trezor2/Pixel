@@ -5,15 +5,18 @@ body {
 }
 
 header {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     padding: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
     font-family: pixeboyFont;
-    font-size: 50px;
+    font-size: 80px;
 }
 
 .crypto-list {
@@ -33,10 +36,10 @@ h1 {
 
 @font-face {
     font-family: pixeboyFont;
-    src: url('Pixeboy-z8XGD.ttf') format('truetype');
+    src: url('../fonts/pixeboy/Pixeboy-z8XGD.ttf') format('truetype');
 }
 
 @font-face {
     font-family: publicpixelFont;
-    src: url('PublicPixel-z84yD.ttf') format('truetype');
+    src: url('../fonts/publicpixel/PublicPixel-z84yD.ttf') format('truetype');
 }
