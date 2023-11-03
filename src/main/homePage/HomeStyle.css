@@ -1,0 +1,42 @@
+body {
+    font-family: publicpixelFont;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-family: pixeboyFont;
+    font-size: 50px;
+}
+
+.crypto-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.crypto-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+@font-face {
+    font-family: pixeboyFont;
+    src: url('Pixeboy-z8XGD.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: publicpixelFont;
+    src: url('PublicPixel-z84yD.ttf') format('truetype');
+}
