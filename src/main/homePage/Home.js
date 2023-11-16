@@ -1,6 +1,6 @@
 const character = document.getElementById('character');
-const option1 = document.getElementById('option1');
-const option2 = document.getElementById('option2');
+const optionHome = document.getElementById('optionHome');
+const optionTracker = document.getElementById('optionTracker');
 const optionWidth = character.clientWidth; // Assuming option1 and option2 have the same width
 const optionHeight = character.clientHeight; // Assuming option1 and option2 have the same height
 const maxLeft = window.innerWidth - character.clientWidth - optionWidth; // Calculate the maximum left position dynamically
@@ -33,27 +33,27 @@ document.addEventListener('keydown', function(event) {
     // Check for enter key press and make popup if the character overlaps with options
     if (event.key === 'Enter') {
         const characterRect = character.getBoundingClientRect();
-        const option1Rect = option1.getBoundingClientRect();
-        const option2Rect = option2.getBoundingClientRect();
+        const optionHomeRect = optionHome.getBoundingClientRect();
+        const optionTrackerRect = optionTracker.getBoundingClientRect();
 
-        if (isOverlap(characterRect, option1Rect)) {
-            alert('You selected option 1');
-        } else if (isOverlap(characterRect, option2Rect)) {
-            alert('You selected option 2');
+        if (isOverlap(characterRect, optionHomeRect)) {
+            alert('You selected Home');
+        } else if (isOverlap(characterRect, optionTrackerRect)) {
+            alert('You selected Tracker');
         }
     }
 
     // Check if the character overlaps with options
     const characterRect = character.getBoundingClientRect();
-    const option1Rect = option1.getBoundingClientRect();
-    const option2Rect = option2.getBoundingClientRect();
+    const optionHomeRect = optionHome.getBoundingClientRect();
+    const optionTrackerRect = optionTracker.getBoundingClientRect();
 
-    if (isOverlap(characterRect, option1Rect)) {
-        highlightOption(option1, option2);
-    } else if (isOverlap(characterRect, option2Rect)) {
-        highlightOption(option2, option1);
+    if (isOverlap(characterRect, optionHomeRect)) {
+        highlightOption(optionHome, optionTracker);
+    } else if (isOverlap(characterRect, optionTrackerRect)) {
+        highlightOption(optionTracker, optionHome);
     } else {
-        resetOptionsColor(option1, option2);
+        resetOptionsColor(optionHome, optionTracker);
     }
 });
 

@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,25 +10,30 @@
 <body>
     <header>
         <h1>PIXEL COINS</h1>
-        <!--<img src="../recourses/images/coin.gif" class="coin-gif">-->
-        <!-- Navigation links go here -->
     </header>
-    <section class="crypto-list" id="crypto-list">
-        <div id="bitcoin-price"></div>
-        <div id="ethereum-price"></div>
-    </section>
 
     <p>Welcome to Pixel Coins!</p>
     <p>Where asset tracking is done right</p>
+    <br>
+    <p>Control the orange pixel below using the arrow keys to navigate the website or simply use the menu</p>
 
     <div class="container">
         <div class="character" id="character"></div>
-        <div class="option" id="option1">Option 1</div>
-        <div class="option" id="option2">Option 2</div>
+        <div class="option" id="optionHome">Home</div>
+        <div class="option" id="optionTracker">Tracker</div>
         <!-- Add more options as needed -->
     </div>
 
+    <section class="crypto-list" id="crypto-list">
+        <ul>
+            <li id="bitcoin-price"></li>
+            <li id="ethereum-price"></li>
+            <!-- Add more cryptocurrencies as needed -->
+        </ul>
+    </section>
+
     <script src="Home.js"></script>
+    <script src="CryptoTracker.js"></script> <!-- Create a new JavaScript file for API integration -->
 
     <footer>
         <p>&copy; 2023 Crypto Price Tracker</p>
